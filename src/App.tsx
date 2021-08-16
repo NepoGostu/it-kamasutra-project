@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {Accordion} from './components/Accordion/Accordion';
 import './App.css';
 import {Rating, RatingValueType} from './components/Rating/Rating';
-import {UncontrolRating} from './components/UncontrolRating/UncontrolRating';
-import UncontrolledOnOff from './components/UncontrolledOnOff/UncontrolledOnOff';
+/*import {RatingPropsType, UncontrolRating} from './components/UncontrolRating/UncontrolRating';*/
+import {UncontrolledOnOff} from './components/UncontrolledOnOff/UncontrolledOnOff';
 import {UncontrolAccordion} from './components/UncontrolAccordion/UncontrolAccordion';
 
 
@@ -17,13 +17,23 @@ function App() {
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
     let [switchOn, setSwitchOn] = useState<boolean>(true)
 
+
+/*    const onChange = (value: RatingPropsType) => {
+        console.log('onChange', value)
+    }*/
+
     return (
         <div className={'App'}>
             <AppTitle title={'This is app component'}/>
             <Rating
                 value={ratingValue}
                 onClick={setRatingValue}/>
-            <UncontrolRating/>
+           {/* <UncontrolRating
+                onChange={onChange}
+                selected={selected}
+                setValue={setRatingValue}
+                defaultValue={ratingValue}
+            />*/}
             <UncontrolAccordion title={'Bla'}/>
             <Accordion
                 title={'Users'}

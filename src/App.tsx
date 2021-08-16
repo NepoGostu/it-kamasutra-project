@@ -43,7 +43,7 @@ function App() {
                 }}
             />
             <UncontrolledOnOff onChange = {setSwitchOn}/>
-           {/* <OnOff
+           {/* <Select
                 on={switchOn}
                 onChange={setSwitchOn}/>*/}
         </div>
